@@ -1,0 +1,112 @@
+.stock-tracker {
+  margin: 0 0 20px;
+  background-color: @color-white;
+
+  @media (max-width: @breakpoint-max-sm) {
+    display: none;
+  }
+
+  .tab-pane > & {
+    @media (max-width: @breakpoint-max-sm) {
+      display: block;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: @font-family-serif;
+    font-weight: @font-weight-semibold;
+    color: @color-white;
+    background-color: @color-gray;
+
+    i {
+      margin: 0 8px;
+      color: @color-green;
+    }
+  }
+
+  &__lists {
+    position: relative;
+    padding: 10px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: calc(~"100% - 40px");
+      height: 2px;
+      content: "";
+      background-color: @color-body;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 0 10px;
+    list-style-type: none;
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    &-title {
+      display: block;
+      margin: 0 0 5px;
+      font-weight: @font-weight-semibold;
+      line-height: 1.33;
+      color: @color-gray-light;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 3px 5px;
+      font-weight: @font-weight-text;
+
+      &:nth-of-type(2n - 1) {
+        background-color: @color-body;
+      }
+
+      span {
+        &:first-of-type {
+          flex: 50%;
+        }
+
+        &:nth-of-type(2) {
+          flex: 30%;
+          text-align: right;
+
+          .stock-tracker__list:first-of-type & {
+            color: @color-green;
+          }
+
+          .stock-tracker__list:last-of-type & {
+            color: @color-orange;
+          }
+        }
+
+        &:last-of-type {
+          flex: 20%;
+          font-weight: normal;
+          text-align: right;
+        }
+      }
+
+      i {
+        margin-right: 4px;
+        font-size: @font-size-xl;
+        line-height: 6px;
+        vertical-align: middle;
+
+        + span {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.footer {
+  padding: 20px 35px 70px 20px;
+  background-color: @color-gray-dark;
+
+  &__brand {
+    display: block;
+    width: 122.5px;
+    height: 20px;
+    margin: 0 0 20px;
+    background-image: url("../images/logo-footer.svg");
+    background-size: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    line-height: 14px;
+    color: @color-white;
+
+    @media (max-width: @breakpoint-max-sm) {
+      width: 100%;
+    }
+  }
+
+  &__copyright {
+    flex: 40%;
+    margin: 0;
+    font-weight: @font-weight-text;
+  }
+
+  &__list {
+    flex: 30%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    &-link {
+      display: inline-block;
+      margin: 0 0 2px;
+      font-weight: @font-weight-semibold;
+      color: @color-white;
+
+      &:hover,
+      &:focus {
+        color: @color-gray-lighter;
+      }
+    }
+  }
+}

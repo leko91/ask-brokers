@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: @font-family-sans;
+  font-size: @font-size;
+  line-height: 1;
+  color: @color-gray;
+  background-color: @color-body;
+}
+
+a {
+  transition: color .15s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+strong {
+  font-weight: @font-weight-semibold;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1280px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: calc(~"100% - 260px"); // 260 is nav + footer height
+  padding: 0 0 20px;
+  margin: -20px 0 0;
+
+  @media (max-width: @breakpoint-max-sm) {
+    min-height: calc(~"100% - 338px");
+  }
+
+  &--flat {
+    padding: 20px 0;
+    margin: 0;
+  }
+}
+
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__40 {
+    flex: 40%;
+
+    @media (max-width: @breakpoint-max-sm) {
+      flex: 100%;
+    }
+  }
+
+  &__50 {
+    flex: 50%;
+
+    @media (max-width: @breakpoint-max-sm) {
+      flex: 100%;
+    }
+  }
+
+  &__60 {
+    flex: 60%;
+
+    @media (max-width: @breakpoint-max-sm) {
+      flex: 100%;
+    }
+  }
+
+  &__article {
+    width: 100%;
+  }
+
+  @inner-left-width: 210px;
+  @inner-right-width: 243px;
+
+  &__inner-left {
+    &:first-of-type {
+      flex: @inner-left-width;
+    }
+
+    &:last-of-type {
+      flex: calc(100% - @inner-left-width);
+
+      @media (max-width: @breakpoint-max-sm) {
+        flex: 100%;
+      }
+    }
+  }
+
+  &__inner-right {
+    &:first-of-type {
+      flex: calc(100% - @inner-right-width);
+
+      @media (max-width: @breakpoint-max-sm) {
+        flex: 100%;
+      }
+    }
+
+    &:last-of-type {
+      flex: @inner-right-width;
+    }
+  }
+
+  &__inner-wide {
+    flex: calc(100% - @inner-left-width - @inner-right-width);
+
+    @media (max-width: @breakpoint-max-sm) {
+      flex: 100%;
+    }
+  }
+
+  .pr-10 {
+    padding-right: 10px;
+  }
+
+  .pl-10 {
+    padding-left: 10px;
+  }
+
+  .pr-10,
+  .pl-10 {
+    &.flex-section__inner-right {
+      @media (max-width: @breakpoint-max-lg) {
+        padding: 0;
+      }
+    }
+
+    @media (max-width: @breakpoint-max-sm) {
+      padding: 0;
+    }
+  }
+}

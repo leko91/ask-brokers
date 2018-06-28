@@ -1,0 +1,103 @@
+.trading-intelligence {
+  margin: 0 0 20px;
+  background-color: @color-white;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: @font-family-serif;
+    font-weight: @font-weight-semibold;
+    color: @color-white;
+    background-color: @color-green;
+
+    i {
+      margin: 0 8px;
+    }
+  }
+
+  &__articles {
+    height: 330px;
+    overflow-y: scroll;
+  }
+
+  &__article {
+    display: flex;
+    margin: 0 0 4px;
+
+    &:last-child {
+      margin: 0;
+
+      .trading-intelligence__content {
+        margin-bottom: 0;
+        border: 0;
+      }
+    }
+
+    img {
+      @media (max-width: @breakpoint-max-md) {
+        height: 50px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0 10px -2px 5px;
+    border-bottom: 1px solid @color-border;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: @font-family-serif;
+    font-size: @font-size-lg;
+    line-height: 1.14;
+
+    .fresh & {
+      position: relative;
+      padding-left: 22px;
+      color: @color-green;
+
+      &::before {
+        position: absolute;
+        top: 4px;
+        left: 7px;
+        width: 8px;
+        height: 8px;
+        content: "";
+        background-color: @color-green;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex: 70px;
+    color: @color-gray-lighter;
+
+    .fresh & {
+      color: @color-green;
+    }
+  }
+
+  &__link {
+    color: @color-gray-lighter;
+
+    &:hover,
+    &:focus,
+    .fresh & {
+      color: @color-green;
+    }
+  }
+
+  &__time {
+    font-size: 11px;
+    font-weight: @font-weight-semibold;
+  }
+}

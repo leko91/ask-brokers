@@ -1,0 +1,71 @@
+.header-top {
+  height: 50px;
+}
+
+.stock-banner {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: @color-gray;
+
+  &__segment {
+    position: relative;
+    width: 100%;
+    padding: 8px 20px;
+
+    @media (max-width: @breakpoint-max-sm) {
+      padding: 8px 10px;
+    }
+
+    &::after {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      width: 1px;
+      height: 80%;
+      content: "";
+      background-color: #58626b;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 6px;
+      color: @color-white;
+    }
+
+    &-bottom {
+      font-family: @font-family-mono;
+      color: @color-orange;
+    }
+  }
+
+  &__brokerage {
+    font-weight: @font-weight-bold;
+    letter-spacing: 1.5px;
+  }
+
+  &__price {
+    font-family: @font-family-mono;
+    letter-spacing: 1.1px;
+  }
+
+  &__percentage {
+    font-size: @font-size-xl;
+    font-weight: @font-weight-semibold;
+    letter-spacing: 2px;
+
+    i {
+      margin-right: 2px;
+      font-size: @font-size;
+    }
+  }
+
+  &__change {
+    margin: 0 0 0 10px;
+    letter-spacing: 1.1px;
+  }
+}

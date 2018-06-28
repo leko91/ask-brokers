@@ -1,0 +1,53 @@
+.trending-news {
+  margin: 0 0 20px;
+  background-color: @color-white;
+
+  &:last-of-type {
+    @media (min-width: @breakpoint-min-lg) {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: @font-family-serif;
+    font-weight: @font-weight-semibold;
+    color: @color-white;
+    background-color: @color-gray;
+
+    &:hover,
+    &:focus {
+      color: @color-green;
+    }
+
+    i {
+      margin: 0 8px;
+      color: @color-green;
+    }
+  }
+
+  &__articles {
+    padding: 0 10px 15px;
+  }
+
+  &__article {
+    display: block;
+    padding: 10px 0 15px;
+    color: @color-gray;
+    border-bottom: 1px solid @color-border;
+
+    &:hover,
+    &:focus {
+      color: @color-green;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-family: @font-family-serif;
+    font-size: @font-size-lg;
+    line-height: 1.14;
+  }
+}

@@ -1,0 +1,68 @@
+.top-brokers {
+  margin: 0 0 20px;
+  background-color: @color-white;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: @font-family-serif;
+    font-weight: @font-weight-semibold;
+    color: @color-white;
+    background-color: @color-green;
+
+    i {
+      margin: 0 8px;
+      color: @color-white;
+    }
+  }
+
+  &__links {
+    overflow: hidden;
+  }
+
+  &__single {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid @color-body;
+    transition: box-shadow .3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 16px 0 #dadee1;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &__image {
+    border: solid 2px @color-border;
+    border-radius: 50%;
+    box-shadow: 0 5px 7px 0 rgba(172, 188, 203, 0.42);
+  }
+
+  &__name {
+    font-weight: @font-weight-text;
+    color: @color-gray;
+
+    &:hover,
+    &:focus {
+      color: @color-gray;
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    color: @color-green;
+
+    i {
+      margin-left: 2px;
+      font-size: @font-size-lg;
+    }
+  }
+}

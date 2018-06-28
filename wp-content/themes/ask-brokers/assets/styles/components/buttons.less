@@ -1,0 +1,35 @@
+.button {
+  display: block;
+  min-width: 130px;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-family: @font-family-serif;
+  font-weight: @font-weight-semibold;
+  color: @color-white;
+  text-align: center;
+  background-color: @color-green;
+  border: 0;
+  transition: box-shadow .3s;
+
+  &:hover,
+  &:focus {
+    color: @color-white;
+    box-shadow: 0 7px 16px 0 rgba(90, 184, 100, 0.35);
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.button--banner {
+  width: 100%;
+  border: 1px solid @color-white;
+  transition: background-color .3s;
+
+  &:hover,
+  &:focus {
+    color: @color-white;
+    background-color: @color-green-light;
+  }
+}

@@ -1,0 +1,3 @@
+*.log
+.vscode
+wp-content/themes/ask-brokers/node_modules

@@ -1,0 +1,45 @@
+.lesson {
+  &__article {
+    display: flex;
+    margin: 0 0 10px;
+    transition: box-shadow .3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: @color-white;
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 15px;
+    font-family: @font-family-serif;
+    font-size: @font-size-title;
+    font-weight: @font-weight-semibold;
+    color: @color-gray-light;
+  }
+
+  &__text {
+    margin: 0 0 20px;
+    font-weight: @font-weight-text;
+    color: @color-gray;
+  }
+
+  &__category {
+    font-weight: @font-weight-semibold;
+    color: @color-gray-lighter;
+    letter-spacing: 1px;
+  }
+}

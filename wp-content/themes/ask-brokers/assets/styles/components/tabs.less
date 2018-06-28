@@ -1,0 +1,48 @@
+.tab-content > .tab-pane {
+  display: block;
+  width: 100%;
+
+  @media (max-width: @breakpoint-max-sm) {
+    display: none;
+  }
+}
+
+.tab-content > .active {
+  @media (max-width: @breakpoint-max-sm) {
+    display: block;
+  }
+}
+
+.fade:not(.show) {
+  opacity: 1;
+
+  @media (max-width: @breakpoint-max-sm) {
+    opacity: 0;
+  }
+}
+
+.nav-tabs {
+  width: 100%;
+  padding: 40px 0 10px;
+  border: 0;
+
+  .nav-item {
+    flex: 33.33333%;
+
+    .nav-link {
+      padding: 10px;
+      color: #fff;
+      font-weight: @font-weight-semibold;
+      text-align: center;
+      text-transform: uppercase;
+      border: 0;
+
+      &.active {
+        color: #fff;
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px solid @color-green;
+      }
+    }
+  }
+}

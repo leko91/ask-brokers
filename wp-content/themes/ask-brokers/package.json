@@ -1,0 +1,43 @@
+{
+  "name": "fictional-university-lwc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulpwatch": "gulp watch",
+    "gulpstyles": "gulp styles",
+    "gulpscripts": "gulp scripts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.46",
+    "@babel/preset-env": "7.0.0-beta.46",
+    "autoprefixer": "8.4.1",
+    "babel-loader": "^8.0.0-beta",
+    "browser-sync": "2.24.4",
+    "gulp": "^4.0.0",
+    "gulp-postcss": "7.0.1",
+    "postcss-color-function": "4.0.1",
+    "postcss-hexrgba": "1.0.1",
+    "postcss-import": "11.1.0",
+    "postcss-mixins": "6.2.0",
+    "postcss-nested": "3.0.0",
+    "postcss-simple-vars": "4.1.0",
+    "webpack": "4.8.2"
+  },
+  "dependencies": {
+    "bootstrap-less-port": "^0.3.0",
+    "chart.js": "^2.7.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-less": "^4.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-util": "^3.0.8",
+    "jquery": "3.3.1",
+    "minimatch": "^3.0.4",
+    "normalize.css": "8.0.0",
+    "slick-carousel": "1.8.1"
+  }
+}

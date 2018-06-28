@@ -1,0 +1,78 @@
+.nav-education:hover > .dropdown-menu {
+  @media (min-width: @breakpoint-min-lg) {
+    display: block;
+  }
+}
+
+.filter {
+  height: 40px;
+  margin: 0;
+
+  i {
+    margin: 0 8px 0 0;
+    color: @color-green;
+  }
+}
+
+.dropdown-toggle {
+  .filter & {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px 0 8px;
+    font-family: @font-family-serif;
+    font-weight: @font-weight-semibold;
+    color: @color-white;
+    background-color: @color-gray;
+    transition: background-color .3s;
+
+    &:hover {
+      background-color: @color-gray-light;
+    }
+  }
+
+  &::after {
+    display: none;
+  }
+
+  .filter.show & {
+    background-color: @color-gray-light;
+  }
+}
+
+.dropdown-menu {
+  padding: 20px 25px;
+  margin: 0;
+  background-color: @color-gray;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 7px 16px 0 rgba(0, 0, 0, 0.12);
+
+  &.show {
+    display: flex;
+    flex-wrap: wrap;
+
+    .dropdown-item {
+      flex: 50%;
+    }
+  }
+
+  .filter & {
+    min-width: 358px;
+  }
+}
+
+.dropdown-item {
+  padding: 0;
+  font-family: @font-family-serif;
+  font-size: @font-size;
+  font-weight: @font-weight-semibold;
+  line-height: 2;
+  color: @color-white;
+
+  &:hover,
+  &:focus {
+    color: @color-green;
+    background-color: inherit;
+  }
+}

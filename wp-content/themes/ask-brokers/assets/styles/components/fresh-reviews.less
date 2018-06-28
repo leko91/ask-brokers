@@ -1,0 +1,70 @@
+.fresh-reviews {
+  background-color: @color-white;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: @font-family-serif;
+    font-weight: @font-weight-semibold;
+    color: @color-white;
+    background-color: @color-gray;
+
+    i {
+      margin: 0 8px;
+      color: @color-green;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin: 0 0 15px;
+    font-size: @font-size-title;
+    color: @color-gray-light;
+
+    &:hover,
+    &:focus {
+      color: @color-green;
+    }
+  }
+
+  &__articles {
+    padding: 20px;
+  }
+
+  &__article {
+    position: relative;
+    margin: 0 0 20px;
+    border-bottom: 2px solid @color-border;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  &__text {
+    margin: 0 0 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px;
+  }
+
+  &__stars {
+    font-size: 0;
+
+    i {
+      font-size: @font-size-xl;
+      color: @color-green;
+    }
+  }
+
+  &__date {
+    font-weight: @font-weight-semibold;
+    color: @color-gray-lighter;
+    letter-spacing: 2px;
+  }
+}
